@@ -1,5 +1,6 @@
 ?twitch-videoad.js application/javascript
 (function() {
+    if (typeof init.headers['Authorization'] === 'string') { init.headers['Authorization'] = ''; }
     if ( /(^|\.)twitch\.tv$/.test(document.location.hostname) === false ) { return; }
     function hookFetch() {
         //var OPT_ACCESS_TOKEN_PLAYER_TYPE = 'thunderdome';//480p
